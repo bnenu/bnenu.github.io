@@ -18,27 +18,32 @@
         body {
           font-family: 'Source Sans Pro', sans-serif;
           font-size: 16px;
-          background: #FFFFFF;
+          background: #303030;
+          color: #F8F8F8;
         }
         h1, h2, h3, h4, h5, h6 { font-family: 'Josefin Sans', sans-serif; }
         h1, h2, h3 { font-weight: 700; }
         h4, h5, h6 { font-weight: 400; }
         * {
           box-sizing: border-box;
-          background-color: rgba(0, 0, 0, 0.1);
+          /*background-color: rgba(255, 255, 20, 0.1);*/
         }
         a {
-          color: CornflowerBlue;
+          color: rgb(127, 255, 0);
           text-decoration: none;
           border-bottom: 2px solid transparent;
         }
-        a:hover { border-bottom: 2px solid CornflowerBlue; }
-        .bg-grey { background-color: lightblue; }
-        .bg-blue { background-color: CornflowerBlue; }
+        a:hover { border-bottom: 2px solid rgb(127, 255, 0); }
+        .bg-dark { background-color: #303030; }
+        .bg-light { background-color: white; }
+        .color-dark { color: #303030; }
+        .color-light { color: #F8F8F8; }
+
         .sm-hide { display: none; }
         .md-hide { display: block; }
         .lg-hide { display: block; }
         .logo { width: 100%; }
+        .logo h1 { text-align: center; }
         .main-nav {
           background-color:	dimgray;
           position: fixed;
@@ -53,52 +58,72 @@
         .contact { font-size: 1rem; }
         .contact ul { flex-direction: column; }
         .contact li { font-size: .8em; }
-        
+
         .work-list { flex-direction: column; }
-        .card { padding: 1rem; }
-        
+        .card { padding: 1rem; max-width: 370px;}
+        .card-image {
+          background-image: url(http://placehold.it/350x100);
+          background-size: cover;
+          background-repeat: no-repeat;
+          width: 100%;
+          height: 100px;
+        }
+        .container {
+          width: 100%;
+          max-width: 100%;
+          heigth: 100%;
+        }
         @media screen and (min-width: 440px) {
           .sm-hide { display: block; }
           .md-hide { display: none; }
           .lg-hide { display: block; }
+          .logo h1 { text-align: right; }
           .contact li { font-size: 1em; }
+
           .main-nav {
-            background-color: white;
+            background-color: transparent;
             position: static;
+            padding-left: 4rem;
+            transform: rotate(90deg);
+            transform-origin: top left;
           }
-          .main-nav ul { flex-direction: column; }
+          .main-nav ul { flex-direction: column-reverse; }
         }
-        
+
         @media screen and (min-width: 770px) {
+          .container {
+            width: 50%;
+            max-width: 50%;
+          }
           .sm-hide { display: block; }
           .md-hide { display: block; }
           .lg-hide { display: none; }
+          .logo { text-align: right; }
           .contact ul { flex-direction: row; }
           .contact li { font-size: 1.2em; }
-          .work-list { flex-direction: row; }
-          .work-list article { max-width: 350px; }
+          .work-list { flex-direction: row; justify-content: space-around; }
         }
         </style>
     </head>
     <body class="p0 m0 flex flex-column">
       <!--[if lt IE 7]>
         <p class="chromeframe">
-          You are using an <strong>outdated</strong> browser. 
-          Please 
+          You are using an <strong>outdated</strong> browser.
+          Please
           <a href="http://browsehappy.com/">
             upgrade your browser
-          </a> 
+          </a>
           or
           <a href="http://www.google.com/chromeframe/?redirect=true">
             activate Google Chrome Frame
-          </a> 
+          </a>
           to improve your experience.
         </p>
       <![endif]-->
 
-      <header class="p0 flex content-stretch" id="page-header">
+      <header class="p0 flex content-stretch items-stretch" id="page-header">
         <div class="p0 logo">
-          <h1 class="center">
+          <h1 class="">
             <a href="#" >
               BOGDAN NENU
             </a>
@@ -117,10 +142,11 @@
         <section class="py4 flex bio" id="bio">
 
             <div class="p1 flex flex-auto justify-center fit">
-              <div class="flex flex-column flex-auto items-center">
-                <p class="h2 center">Hi</p>
-                <p class="h6 center">My name is Bogdan. I am a full stack web developer. I love the web, I love functional programming with Javascript and I love trailrunning.</p>
-                <p>&#955;</p>
+              <div class="flex flex-column flex-auto items-center container">
+                <div class="">
+                  <p class="h6 center"><span class="h2">Hi</span><br/>My name is Bogdan. I am a full stack web developer. I love the web, I love functional programming with Javascript and I love trailrunning.</p>
+                  <p class="center">&#955;</p>
+                </div>
                 <div class="contact">
                     <ul class="p0 m0 list-reset flex">
                       <li class="py1 px2">
@@ -140,52 +166,43 @@
                           <i class="fa fa-linkedin" aria-hidden="true"></i>
                           <div class="">https://www.linkedin.com/bnenu</div>
                         </a>
-                      </li>  
+                      </li>
                     </ul>
                   </div>
               </div>
             </div>
 
         </section>
-        <section class="py4 bg-grey" id="work">
+        <section class="py4 bg-light color-dark" id="work">
           <header class="center">
-
           </header>
-          <div class="flex justify-around work-list">
-            <article class="card">
-
+          <div class="flex work-list items-center px1">
+            <article class="card mb1 border">
               <div class="card-header">
                  <h4 class="caps">carpattrail</h4>
               </div>
               <div class="card-body">
-                <div class="card-image sm-hide">
-                  <img src="http://placehold.it/150x150" alt="hero-image">
-                </div>
+                <div class="card-image"></div>
                 <div class="overflow-hidden">
                   <p>My running team website and blog. The project is focused on various media content display with css and a drop of Javascript.</p>
                 </div>
               </div>
-
             </article>
-            <article class="card">
-
+            <article class="card mb1 border">
               <div class="card-header">
                  <h4 class="caps">EXOjs</h4>
               </div>
               <div class="card-body">
-                <div class="card-image sm-hide">
-                  <img src="http://placehold.it/150x150" alt="hero-image">
-                </div>
+                <div class="card-image"></div>
                 <div class="overflow-hidden">
                   <p>A functional reactive state management experiment inspired by Redux. It is based on RxJS subjects and tagged unions for data types.</p>
                 </div>
               </div>
-
             </article>
           </div>
         </section>
         <section class="py4 stories" id="stories">
-          <div class="p1 stories-container mx-auto">
+          <div class="p1 mx-auto container">
           <header class="center">
 
           </header>
