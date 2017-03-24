@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Bogdan Nenu</title>
+        <meta name="description" content="">
+        <meta name="keywords" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700|Source+Sans+Pro:300,400" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+        <link rel="stylesheet" href="https://unpkg.com/basscss@8.0.2/css/basscss.min.css" >
+        <link rel="stylesheet" href="css/main.css">
+        <style>
+        body {
+          font-family: 'Source Sans Pro', sans-serif;
+          font-size: 16px;
+          background: #FFFFFF;
+        }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Josefin Sans', sans-serif; }
+        h1, h2, h3 { font-weight: 700; }
+        h4, h5, h6 { font-weight: 400; }
+        * {
+          box-sizing: border-box;
+          background-color: rgba(0, 0, 0, 0.1);
+        }
+        a {
+          color: CornflowerBlue;
+          text-decoration: none;
+          border-bottom: 2px solid transparent;
+        }
+        a:hover { border-bottom: 2px solid CornflowerBlue; }
+        .bg-grey { background-color: lightblue; }
+        .bg-blue { background-color: CornflowerBlue; }
+        .sm-hide { display: none; }
+        .md-hide { display: block; }
+        .lg-hide { display: block; }
+        .logo { width: 100%; }
+        .main-nav {
+          background-color:	dimgray;
+          position: fixed;
+          bottom: 0;
+          width: 100%;
+        }
+        .main-nav ul {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+        }
+        .contact { font-size: 1rem; }
+        .contact ul { flex-direction: column; }
+        .contact li { font-size: .8em; }
+        
+        .work-list { flex-direction: column; }
+        .card { padding: 1rem; }
+        
+        @media screen and (min-width: 440px) {
+          .sm-hide { display: block; }
+          .md-hide { display: none; }
+          .lg-hide { display: block; }
+          .contact li { font-size: 1em; }
+          .main-nav {
+            background-color: white;
+            position: static;
+          }
+          .main-nav ul { flex-direction: column; }
+        }
+        
+        @media screen and (min-width: 770px) {
+          .sm-hide { display: block; }
+          .md-hide { display: block; }
+          .lg-hide { display: none; }
+          .contact ul { flex-direction: row; }
+          .contact li { font-size: 1.2em; }
+          .work-list { flex-direction: row; }
+          .work-list article { max-width: 350px; }
+        }
+        </style>
+    </head>
+    <body class="p0 m0 flex flex-column">
+      <!--[if lt IE 7]>
+        <p class="chromeframe">
+          You are using an <strong>outdated</strong> browser. 
+          Please 
+          <a href="http://browsehappy.com/">
+            upgrade your browser
+          </a> 
+          or
+          <a href="http://www.google.com/chromeframe/?redirect=true">
+            activate Google Chrome Frame
+          </a> 
+          to improve your experience.
+        </p>
+      <![endif]-->
+
+      <header class="p0 flex content-stretch" id="page-header">
+        <div class="p0 logo">
+          <h1 class="center">
+            <a href="#" >
+              BOGDAN NENU
+            </a>
+          </h1>
+        </div>
+        <nav class="main-nav">
+          <ul class="m0 list-reset">
+            <li class="m1"><a href="#">BIO</a></li>
+            <li class="m1"><a href="#work">WORK</a></li>
+            <li class="m1"><a href="#stories">STORIES</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main class="p0 m0">
+        <section class="py4 flex bio" id="bio">
+
+            <div class="p1 flex flex-auto justify-center fit">
+              <div class="flex flex-column flex-auto items-center">
+                <p class="h2 center">Hi</p>
+                <p class="h6 center">My name is Bogdan. I am a full stack web developer. I love the web, I love functional programming with Javascript and I love trailrunning.</p>
+                <p>&#955;</p>
+                <div class="contact">
+                    <ul class="p0 m0 list-reset flex">
+                      <li class="py1 px2">
+                        <a href="mainto:bogdan.nenu@gmail.com">
+                          <i class="fa fa-envelope" aria-hidden="true"></i>
+                          <div class="">hello@bogdannenu.com</div>
+                        </a>
+                      </li>
+                      <li class="py1 px2">
+                        <a href="">
+                          <i class="fa fa-github" aria-hidden="true"></i>
+                          <div class="">http://github/bnenu</div>
+                        </a>
+                      </li>
+                      <li class="py1 px2">
+                        <a href="">
+                          <i class="fa fa-linkedin" aria-hidden="true"></i>
+                          <div class="">https://www.linkedin.com/bnenu</div>
+                        </a>
+                      </li>  
+                    </ul>
+                  </div>
+              </div>
+            </div>
+
+        </section>
+        <section class="py4 bg-grey" id="work">
+          <header class="center">
+
+          </header>
+          <div class="flex justify-around work-list">
+            <article class="card">
+
+              <div class="card-header">
+                 <h4 class="caps">carpattrail</h4>
+              </div>
+              <div class="card-body">
+                <div class="card-image sm-hide">
+                  <img src="http://placehold.it/150x150" alt="hero-image">
+                </div>
+                <div class="overflow-hidden">
+                  <p>My running team website and blog. The project is focused on various media content display with css and a drop of Javascript.</p>
+                </div>
+              </div>
+
+            </article>
+            <article class="card">
+
+              <div class="card-header">
+                 <h4 class="caps">EXOjs</h4>
+              </div>
+              <div class="card-body">
+                <div class="card-image sm-hide">
+                  <img src="http://placehold.it/150x150" alt="hero-image">
+                </div>
+                <div class="overflow-hidden">
+                  <p>A functional reactive state management experiment inspired by Redux. It is based on RxJS subjects and tagged unions for data types.</p>
+                </div>
+              </div>
+
+            </article>
+          </div>
+        </section>
+        <section class="py4 stories" id="stories">
+          <div class="p1 stories-container mx-auto">
+          <header class="center">
+
+          </header>
+          <div>
+            <article>
+              <aside class="h6 caps">5 min. read</aside>
+              <header>
+                <h3>5 Incredibly Useful web development Tips For Small Businesses</h3>
+              </header>
+              <div>
+
+              </div>
+              <footer>
+                <hr/>
+              </footer>
+            </article>
+            <article>
+              <aside class="h6 caps">10 min. read</aside>
+              <header>
+                <h3>Old School javascript</h3>
+              </header>
+              <div>
+
+              </div>
+              <footer>
+                <hr/>
+              </footer>
+            </article>
+            <article>
+              <aside class="h6 caps">7 min. read</aside>
+              <header>
+                <h3>5 Brilliant Ways To Use javascript</h3>
+              </header>
+              <div>
+
+              </div>
+              <footer>
+                <hr/>
+              </footer>
+            </article>
+          </div>
+          </div>
+        </section>
+      </main>
+
+      <footer id="page-footer">
+        <div class="pb2">
+          <p>&copy; Bogdan Nenu 2017</p>
+        </div>
+      </footer>
+      <script src="https://use.fontawesome.com/5b53d1f118.js"></script>
+      <script src="js/main.js"></script>
+    </body>
+</html>
