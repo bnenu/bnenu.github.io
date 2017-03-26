@@ -55,6 +55,9 @@
           flex-direction: row;
           justify-content: space-around;
         }
+        .bio-text {
+          font-size: .8rem;
+        }
         .contact { font-size: 1rem; }
         .contact ul { flex-direction: column; }
         .contact li { font-size: .8em; }
@@ -81,6 +84,7 @@
           .md-hide { display: none; }
           .lg-hide { display: block; }
           .logo h1 { text-align: right; }
+          .bio-text { font-size: 1rem; }
           .contact li { font-size: 1em; }
 
           .main-nav {
@@ -102,8 +106,9 @@
           .md-hide { display: block; }
           .lg-hide { display: none; }
           .logo { text-align: right; }
+          .bio-text { font-size: 2.5rem; }
           .contact ul { flex-direction: row; }
-          .contact li { font-size: 1.2em; }
+          .contact li { font-size: 1.1em; }
           .work-list { flex-direction: row; justify-content: space-around; }
         }
         </style>
@@ -149,27 +154,27 @@
             <div class="p1 flex flex-auto justify-center fit">
               <div class="flex flex-column flex-auto items-center container">
                 <div class="">
-                  <p class="h6 center"><span class="h2">Hi</span><br/>My name is Bogdan. I am a full stack web developer. I love the web, I love functional programming with Javascript and I love trailrunning.</p>
+                  <p class="bio-text center"><span class="h2">Hi</span><br/>My name is Bogdan. I am a full stack web developer. I love the web, I love functional programming with Javascript and I love trailrunning.</p>
                   <p class="center">&#955;</p>
                 </div>
                 <div class="contact">
                     <ul class="p0 m0 list-reset flex">
                       <li class="py1 px2">
-                        <a href="mainto:bogdan.nenu@gmail.com">
+                        <a class="flex" href="mailto:bogdan.nenu@gmail.com">
                           <i class="fa fa-envelope" aria-hidden="true"></i>
-                          <div class="">hello@bogdannenu.com</div>
+                          <div class="pl1 sm-hide">hello@bogdannenu.com</div>
                         </a>
                       </li>
                       <li class="py1 px2">
-                        <a href="">
+                        <a class="flex" href="http://github/bnenu">
                           <i class="fa fa-github" aria-hidden="true"></i>
-                          <div class="">http://github/bnenu</div>
+                          <div class="pl1 sm-hide">http://github/bnenu</div>
                         </a>
                       </li>
                       <li class="py1 px2">
-                        <a href="">
+                        <a class ="flex" href="https://www.linkedin.com/bnenu">
                           <i class="fa fa-linkedin" aria-hidden="true"></i>
-                          <div class="">https://www.linkedin.com/bnenu</div>
+                          <div class="pl1 sm-hide">https://www.linkedin.com/bnenu</div>
                         </a>
                       </li>
                     </ul>
@@ -258,7 +263,7 @@
       </main>
 
       <footer id="page-footer">
-        <div class="wrapper">
+        <div class="mx-auto wrapper">
           <div class="pb2">
             <p>&copy; Bogdan Nenu 2017</p>
           </div>
