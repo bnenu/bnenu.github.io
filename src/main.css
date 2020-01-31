@@ -1,0 +1,35 @@
+div, p, ul, ol, input {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Source Sans Pro', 'Trebuchet MS', 'Lucida Grande', 'Bitstream Vera Sans', 'Helvetica Neue', sans-serif;
+  background-color: #000000;
+  color: #33FF00;
+}
+
+p {
+  margin: 0.25em 0;
+}
+
+.input {
+  background: #000000;
+  color: #33FF00;
+  outline: 0;
+  border: none;
+  font-size: 1em;
+  caret-color: red;
+  width: 90%;
+}
+
+#terminal {
+  max-height: 99vh;
+  overflow-y: scroll;
+}
+
+.container {
+  width: 50%;
+  margin: 0 auto;
+}
+
