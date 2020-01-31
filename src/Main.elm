@@ -60,9 +60,9 @@ extra =
 summary =
     """
     -----------------
-    I am Bogdan
+    Hi, I am Bogdan
     -----------------
-    A full stack web developer working with Elixir, Javascript and Elm. I love the web, I love functional programming and I love hiking and trailrunning.
+    A full stack web developer working with Elixir, Javascript, React, React Native and Elm. I love the web, I love functional programming and I love hiking and trailrunning.
     """
 
 
@@ -71,6 +71,7 @@ experience =
     ---------------------
     Some of my jobs
     ---------------------
+    2019 - now - Full stack developer - Deutsche Back, Bucharest
     2017 - 2019 Full stack web developer - Aenvira Solutions, Bucharest
     2009 - 2017 IT Project Lead - OMV Petrom Global Solutions, Bucharest/Vienna
     2005 - 2009 Project/Team Lead, Software Integration - Crescendo International, Bucharest
@@ -83,8 +84,10 @@ projects =
     --------------------
     Some projects
     --------------------
-    Barenode - Functional, dependecy-less web server in NodeJS build with ADTs.
-    ExoJS    - A functional reactive state management experiment inspired by Redux. It is based on RxJS subjects and tagged unions for data types.
+    shrd2.com - Real time web app built with Elixir, Phoenix LiveView and Svelte.
+    bogdannenu.com - Small Elm experiment.
+    https://github.com/bnenu/bearnode - Functional, dependecy-less web server in NodeJS build with ADTs.
+    https://github.com/bnenu/exo - A functional reactive state management experiment build RxJS subjects and tagged unions.
     """
 
 
@@ -372,8 +375,11 @@ update msg model =
                             |> handleCommand m args
                 in
                 ( updatedModel
-                , Process.sleep 100
-                    |> Task.perform (always (ScrollToBottom "terminal"))
+                , Cmd.batch
+                    [ command
+                    , Process.sleep 100
+                        |> Task.perform (always (ScrollToBottom "terminal"))
+                    ]
                 )
 
             else
